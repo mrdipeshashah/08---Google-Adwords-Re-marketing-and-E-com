@@ -1,0 +1,591 @@
+{
+    "exportFormatVersion": 2,
+    "exportTime": "2019-08-11 16:17:32",
+    "containerVersion": {
+        "path": "accounts/4701529512/containers/11640069/versions/0",
+        "accountId": "4701529512",
+        "containerId": "11640069",
+        "containerVersionId": "0",
+        "container": {
+            "path": "accounts/4701529512/containers/11640069",
+            "accountId": "4701529512",
+            "containerId": "11640069",
+            "name": "08 - Google Adwords Re-marketing and E-commerce",
+            "publicId": "GTM-KH89QJT",
+            "usageContext": [
+                "WEB"
+            ],
+            "fingerprint": "1565027183472",
+            "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/4701529512/containers/11640069/workspaces?apiLink=container"
+        },
+        "tag": [
+            {
+                "accountId": "4701529512",
+                "containerId": "11640069",
+                "tagId": "3",
+                "name": "Google Adwords E-commerce",
+                "type": "awct",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableConversionLinker",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "orderId",
+                        "value": "{{DLV - Transaction ID}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "conversionValue",
+                        "value": "{{DLV - Revenue}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "conversionCookiePrefix",
+                        "value": "_gcl"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "conversionId",
+                        "value": "{{Google Adwords Conversion ID}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "conversionLabel",
+                        "value": "{{Google Adwords Conversion Label}}"
+                    }
+                ],
+                "fingerprint": "1555254052088",
+                "firingTriggerId": [
+                    "17"
+                ],
+                "parentFolderId": "10",
+                "tagFiringOption": "ONCE_PER_EVENT"
+            },
+            {
+                "accountId": "4701529512",
+                "containerId": "11640069",
+                "tagId": "4",
+                "name": "Google Adwords Remarketing",
+                "type": "sp",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableDynamicRemarketing",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "conversionId",
+                        "value": "{{Google Adwords Remarketing Conversion ID}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "customParamsFormat",
+                        "value": "NONE"
+                    }
+                ],
+                "fingerprint": "1565027160569",
+                "firingTriggerId": [
+                    "2147479553"
+                ],
+                "parentFolderId": "10",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                }
+            }
+        ],
+        "trigger": [
+            {
+                "accountId": "4701529512",
+                "containerId": "11640069",
+                "triggerId": "17",
+                "name": "Live E-commerce Confirmation",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "purchase"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1565027150995",
+                "parentFolderId": "8"
+            }
+        ],
+        "variable": [
+            {
+                "accountId": "4701529512",
+                "containerId": "11640069",
+                "variableId": "1",
+                "name": "DLV - Revenue",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "ecommerce.purchase.actionField.revenue"
+                    }
+                ],
+                "fingerprint": "1555110780893",
+                "parentFolderId": "6",
+                "formatValue": {}
+            },
+            {
+                "accountId": "4701529512",
+                "containerId": "11640069",
+                "variableId": "2",
+                "name": "DLV - Transaction ID",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "ecommerce.purchase.actionField.id"
+                    }
+                ],
+                "fingerprint": "1555110780895",
+                "parentFolderId": "6",
+                "formatValue": {}
+            },
+            {
+                "accountId": "4701529512",
+                "containerId": "11640069",
+                "variableId": "4",
+                "name": "Google Adwords Conversion ID",
+                "type": "c",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "973970436"
+                    }
+                ],
+                "fingerprint": "1555261774892",
+                "parentFolderId": "23",
+                "formatValue": {}
+            },
+            {
+                "accountId": "4701529512",
+                "containerId": "11640069",
+                "variableId": "5",
+                "name": "Google Adwords Conversion Label",
+                "type": "c",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "nxvACJREzpNDEJKftdAD"
+                    }
+                ],
+                "fingerprint": "1555261774893",
+                "parentFolderId": "23",
+                "formatValue": {}
+            },
+            {
+                "accountId": "4701529512",
+                "containerId": "11640069",
+                "variableId": "6",
+                "name": "Google Adwords Remarketing Conversion ID",
+                "type": "c",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "973950866"
+                    }
+                ],
+                "fingerprint": "1555261774894",
+                "parentFolderId": "23",
+                "formatValue": {}
+            }
+        ],
+        "folder": [
+            {
+                "accountId": "4701529512",
+                "containerId": "11640069",
+                "folderId": "5",
+                "name": "Bing Tags",
+                "fingerprint": "1555110780883"
+            },
+            {
+                "accountId": "4701529512",
+                "containerId": "11640069",
+                "folderId": "6",
+                "name": "Data Layer Variables",
+                "fingerprint": "1555110780883"
+            },
+            {
+                "accountId": "4701529512",
+                "containerId": "11640069",
+                "folderId": "7",
+                "name": "DoubleClick Tags",
+                "fingerprint": "1555110780884"
+            },
+            {
+                "accountId": "4701529512",
+                "containerId": "11640069",
+                "folderId": "8",
+                "name": "E-commerce Triggers",
+                "fingerprint": "1555110780884"
+            },
+            {
+                "accountId": "4701529512",
+                "containerId": "11640069",
+                "folderId": "9",
+                "name": "Facebook Tags",
+                "fingerprint": "1555110780884"
+            },
+            {
+                "accountId": "4701529512",
+                "containerId": "11640069",
+                "folderId": "10",
+                "name": "Google Adwords Tags",
+                "fingerprint": "1555110780885"
+            },
+            {
+                "accountId": "4701529512",
+                "containerId": "11640069",
+                "folderId": "11",
+                "name": "Google Analytics Tags",
+                "fingerprint": "1555110780885"
+            },
+            {
+                "accountId": "4701529512",
+                "containerId": "11640069",
+                "folderId": "12",
+                "name": "Other Tags",
+                "fingerprint": "1555110780885"
+            },
+            {
+                "accountId": "4701529512",
+                "containerId": "11640069",
+                "folderId": "23",
+                "name": "Platform Variables",
+                "fingerprint": "1555261751117"
+            },
+            {
+                "accountId": "4701529512",
+                "containerId": "11640069",
+                "folderId": "13",
+                "name": "Product Trigger",
+                "fingerprint": "1555110780886"
+            },
+            {
+                "accountId": "4701529512",
+                "containerId": "11640069",
+                "folderId": "14",
+                "name": "Triggers",
+                "fingerprint": "1555110780886"
+            },
+            {
+                "accountId": "4701529512",
+                "containerId": "11640069",
+                "folderId": "15",
+                "name": "VP Trigger",
+                "fingerprint": "1555110780887"
+            }
+        ],
+        "builtInVariable": [
+            {
+                "accountId": "4701529512",
+                "containerId": "11640069",
+                "type": "PAGE_URL",
+                "name": "Page URL"
+            },
+            {
+                "accountId": "4701529512",
+                "containerId": "11640069",
+                "type": "PAGE_HOSTNAME",
+                "name": "Page Hostname"
+            },
+            {
+                "accountId": "4701529512",
+                "containerId": "11640069",
+                "type": "PAGE_PATH",
+                "name": "Page Path"
+            },
+            {
+                "accountId": "4701529512",
+                "containerId": "11640069",
+                "type": "REFERRER",
+                "name": "Referrer"
+            },
+            {
+                "accountId": "4701529512",
+                "containerId": "11640069",
+                "type": "EVENT",
+                "name": "Event"
+            },
+            {
+                "accountId": "4701529512",
+                "containerId": "11640069",
+                "type": "CLICK_ELEMENT",
+                "name": "Click Element"
+            },
+            {
+                "accountId": "4701529512",
+                "containerId": "11640069",
+                "type": "CLICK_CLASSES",
+                "name": "Click Classes"
+            },
+            {
+                "accountId": "4701529512",
+                "containerId": "11640069",
+                "type": "CLICK_ID",
+                "name": "Click ID"
+            },
+            {
+                "accountId": "4701529512",
+                "containerId": "11640069",
+                "type": "CLICK_TARGET",
+                "name": "Click Target"
+            },
+            {
+                "accountId": "4701529512",
+                "containerId": "11640069",
+                "type": "CLICK_URL",
+                "name": "Click URL"
+            },
+            {
+                "accountId": "4701529512",
+                "containerId": "11640069",
+                "type": "CLICK_TEXT",
+                "name": "Click Text"
+            },
+            {
+                "accountId": "4701529512",
+                "containerId": "11640069",
+                "type": "FORM_ELEMENT",
+                "name": "Form Element"
+            },
+            {
+                "accountId": "4701529512",
+                "containerId": "11640069",
+                "type": "FORM_CLASSES",
+                "name": "Form Classes"
+            },
+            {
+                "accountId": "4701529512",
+                "containerId": "11640069",
+                "type": "FORM_ID",
+                "name": "Form ID"
+            },
+            {
+                "accountId": "4701529512",
+                "containerId": "11640069",
+                "type": "FORM_TARGET",
+                "name": "Form Target"
+            },
+            {
+                "accountId": "4701529512",
+                "containerId": "11640069",
+                "type": "FORM_URL",
+                "name": "Form URL"
+            },
+            {
+                "accountId": "4701529512",
+                "containerId": "11640069",
+                "type": "FORM_TEXT",
+                "name": "Form Text"
+            },
+            {
+                "accountId": "4701529512",
+                "containerId": "11640069",
+                "type": "ERROR_MESSAGE",
+                "name": "Error Message"
+            },
+            {
+                "accountId": "4701529512",
+                "containerId": "11640069",
+                "type": "ERROR_URL",
+                "name": "Error URL"
+            },
+            {
+                "accountId": "4701529512",
+                "containerId": "11640069",
+                "type": "ERROR_LINE",
+                "name": "Error Line"
+            },
+            {
+                "accountId": "4701529512",
+                "containerId": "11640069",
+                "type": "NEW_HISTORY_FRAGMENT",
+                "name": "New History Fragment"
+            },
+            {
+                "accountId": "4701529512",
+                "containerId": "11640069",
+                "type": "OLD_HISTORY_FRAGMENT",
+                "name": "Old History Fragment"
+            },
+            {
+                "accountId": "4701529512",
+                "containerId": "11640069",
+                "type": "NEW_HISTORY_STATE",
+                "name": "New History State"
+            },
+            {
+                "accountId": "4701529512",
+                "containerId": "11640069",
+                "type": "OLD_HISTORY_STATE",
+                "name": "Old History State"
+            },
+            {
+                "accountId": "4701529512",
+                "containerId": "11640069",
+                "type": "HISTORY_SOURCE",
+                "name": "History Source"
+            },
+            {
+                "accountId": "4701529512",
+                "containerId": "11640069",
+                "type": "CONTAINER_VERSION",
+                "name": "Container Version"
+            },
+            {
+                "accountId": "4701529512",
+                "containerId": "11640069",
+                "type": "DEBUG_MODE",
+                "name": "Debug Mode"
+            },
+            {
+                "accountId": "4701529512",
+                "containerId": "11640069",
+                "type": "RANDOM_NUMBER",
+                "name": "Random Number"
+            },
+            {
+                "accountId": "4701529512",
+                "containerId": "11640069",
+                "type": "CONTAINER_ID",
+                "name": "Container ID"
+            },
+            {
+                "accountId": "4701529512",
+                "containerId": "11640069",
+                "type": "HTML_ID",
+                "name": "HTML ID"
+            },
+            {
+                "accountId": "4701529512",
+                "containerId": "11640069",
+                "type": "ENVIRONMENT_NAME",
+                "name": "Environment Name"
+            },
+            {
+                "accountId": "4701529512",
+                "containerId": "11640069",
+                "type": "VIDEO_PROVIDER",
+                "name": "Video Provider"
+            },
+            {
+                "accountId": "4701529512",
+                "containerId": "11640069",
+                "type": "VIDEO_URL",
+                "name": "Video URL"
+            },
+            {
+                "accountId": "4701529512",
+                "containerId": "11640069",
+                "type": "VIDEO_TITLE",
+                "name": "Video Title"
+            },
+            {
+                "accountId": "4701529512",
+                "containerId": "11640069",
+                "type": "VIDEO_DURATION",
+                "name": "Video Duration"
+            },
+            {
+                "accountId": "4701529512",
+                "containerId": "11640069",
+                "type": "VIDEO_PERCENT",
+                "name": "Video Percent"
+            },
+            {
+                "accountId": "4701529512",
+                "containerId": "11640069",
+                "type": "VIDEO_VISIBLE",
+                "name": "Video Visible"
+            },
+            {
+                "accountId": "4701529512",
+                "containerId": "11640069",
+                "type": "VIDEO_STATUS",
+                "name": "Video Status"
+            },
+            {
+                "accountId": "4701529512",
+                "containerId": "11640069",
+                "type": "VIDEO_CURRENT_TIME",
+                "name": "Video Current Time"
+            },
+            {
+                "accountId": "4701529512",
+                "containerId": "11640069",
+                "type": "SCROLL_DEPTH_THRESHOLD",
+                "name": "Scroll Depth Threshold"
+            },
+            {
+                "accountId": "4701529512",
+                "containerId": "11640069",
+                "type": "SCROLL_DEPTH_UNITS",
+                "name": "Scroll Depth Units"
+            },
+            {
+                "accountId": "4701529512",
+                "containerId": "11640069",
+                "type": "SCROLL_DEPTH_DIRECTION",
+                "name": "Scroll Direction"
+            },
+            {
+                "accountId": "4701529512",
+                "containerId": "11640069",
+                "type": "ELEMENT_VISIBILITY_RATIO",
+                "name": "Percent Visible"
+            },
+            {
+                "accountId": "4701529512",
+                "containerId": "11640069",
+                "type": "ELEMENT_VISIBILITY_TIME",
+                "name": "On-Screen Duration"
+            }
+        ],
+        "fingerprint": "0",
+        "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/4701529512/containers/11640069/versions/0?apiLink=version"
+    }
+}
